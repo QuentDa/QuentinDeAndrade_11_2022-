@@ -1,0 +1,58 @@
+.Home_banner{
+    margin-top: 60px;
+    position: relative;
+    height: 220px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 25px;
+}
+.Home_banner:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/nature_background.png');
+    background-size: cover;
+    top: 0;
+    position: absolute;
+    opacity: 0.7;
+    border-radius: inherit;
+}
+.Home_banner h2{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 400;
+}
+.Location_container{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
+.Card_wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 56px 50px;
+}
+@media screen and (max-width: 1635px) {
+    .Location_container{
+        background: none;
+    }
+    .Card_wrapper{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 780px) {
+    .Home_banner h2{
+        font-size: 31px;
+        justify-content: flex-start;
+        margin-left: 15px;
+        width: 250px;
+    }
+}
+

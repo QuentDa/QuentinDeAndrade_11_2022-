@@ -1,0 +1,10 @@
+.Tag{
+    border-radius: 20px;
+    width: 115px;
+    height: 30px;
+    background: #FF6060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
