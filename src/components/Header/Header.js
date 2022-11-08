@@ -11,7 +11,7 @@ export default function Header() {
                     <NavLink to="/"><img src={logo} className="Logo"  alt='logo'/></NavLink>
                     <div className='Menu'>
                         <ul>
-                            <li><NavLink to="/">Accueil</NavLink></li>
+                            <li><NavLink to="/" end>Accueil</NavLink></li>
                             <li><NavLink to="/About">A Propos</NavLink></li>
                         </ul>
                     </div>

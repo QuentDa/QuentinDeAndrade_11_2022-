@@ -1,0 +1,30 @@
+.Spoiler_title_wrapper{
+    position: relative;
+    height: 47px;
+    background-color: #FF6060;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+}
+.Spoiler_title, .Spoiler p{
+    font-size: 24px;
+}
+.Spoiler{
+    padding: 10px 25px;
+    margin-top: -5px;
+    background-color: #F6F6F6;
+    color: #FF6060;
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+.Spoiler p{
+    margin: 0;
+    padding: 15px 0;
+}

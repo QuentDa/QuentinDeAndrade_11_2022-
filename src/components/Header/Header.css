@@ -24,11 +24,13 @@ header{
 }
 
 .Menu ul a {
+    color: #FF6060;
+}
+.Menu ul a:not(.active) {
     text-decoration: none;
 }
 
 .Menu ul li{
     font-size: 24px;
-    color: #FF6060;
     width: 116px;
 }

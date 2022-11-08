@@ -1,29 +1,16 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import './Home.css';
 import Card from '../../components/Card/Card';
-
+import Banner from '../../components/Banner/Banner';
+import Background from './../../assets/img/nature_background.png';
 
 export default function Home() {
-    const [logements, setLogements] = useState([])
-    useEffect( () => {
-        fetch('logements.json').then((response) =>{
-            return response.json();
-        }).then((logements) => {
-            setLogements(logements)
-            console.log('test')
-        })
-    }, [])
-
     return (
         <div className='Container'>
-            <div className='Home_banner'>
-                <h2>Chez vous, partout et ailleurs</h2>
-            </div>
+            <Banner text="Chez vous, partout et ailleurs" background={ Background }/>
 
             <div className='Location_container'>
-                <div className='Card_wrapper'>
-                    <Card />
-                    <Card />
+                <div className='Location_wrapper'>
                     <Card />
                 </div>
             </div>
