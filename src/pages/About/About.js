@@ -18,6 +18,8 @@ export default function About() {
                 <Collapsible title="Service" description="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."/>
 
                 <Collapsible title="Respect" description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."/>
+
+                <Collapsible title="Respect" description={<ul><li>test</li><li>test2</li></ul>}/>
             </div>
         </div>
         

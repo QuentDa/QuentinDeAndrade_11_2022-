@@ -4,6 +4,12 @@
     background-color: #F6F6F6;
     border-radius: 25px;
 }
+.Card_wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+    padding: 56px;
+}
 @media screen and (max-width: 1635px) {
     .Location_container{
         background: none;

@@ -1,5 +1,4 @@
 .Banner{
-    margin-top: 60px;
     position: relative;
     height: 220px;
     width: 100%;
@@ -16,6 +15,7 @@
     left: 0px;
 }
 .Banner h2{
+    margin-top: 0;
     position: relative;
     height: 100%;
     display: flex;

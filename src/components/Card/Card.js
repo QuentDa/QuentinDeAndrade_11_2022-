@@ -1,27 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Rentals from './../../assets/data/logements.json'
-
 import './Card.css';
 
-
-export default function Card() {
+export default function Card({Link, Picture, Alt, Title}) {
+    console.log(Link)
     return (
-        <div className='Card_wrapper'>
-                {
-                    Rentals && Rentals.map(rental => {
-                        return(
-                            <NavLink to={'/Rental/' + rental.id}>
-                                <div className='Card' key={ rental.id }>                           
-                                        <img src={rental.pictures[0]} alt="logement"/>
-                                        <span>
-                                            { rental.title }
-                                        </span>               
-                                </div>
-                            </NavLink>   
-                        )
-                    })
-                }
-        </div>
+        <NavLink to={Link}>
+            <div className='Card'>
+                <img src={Picture} alt={Alt} />
+                <span>
+                    {Title}
+                </span>
+            </div>
+        </NavLink>
     );
 }
