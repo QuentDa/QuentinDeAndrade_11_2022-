@@ -18,4 +18,8 @@
         padding: 0;
     }
 }
-
+@media screen and (max-width: 500px) {
+    .Card_wrapper{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+}

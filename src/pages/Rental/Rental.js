@@ -4,6 +4,7 @@ import Rentals from './../../assets/data/logements.json'
 import Carousel from '../../components/Carousel/Carousel';
 import Tag from './../../components/Tag/Tag';
 import Rating from '../../components/Rating/Rating';
+import Collapsible from './../../components/Collapsible/Collapsible'
 import './Rental.css';
 
 export default function Rental() {
@@ -14,6 +15,8 @@ export default function Rental() {
     const slides = foundRental.pictures;
     const rating = foundRental.rating;
     const tags = foundRental.tags;
+    const description = foundRental.description
+    const equipments = foundRental.equipments
 
     return (
         <div className='Container'>
@@ -25,7 +28,7 @@ export default function Rental() {
                 <div className='Name_wrapper'>
                     <h2>{foundRental.title}</h2>
                     <span>{foundRental.location}</span>
-                    <div className='Tag_wrapper'>
+                    <div>
                         <Tag tags={tags} />
                     </div>
                 </div>
@@ -38,6 +41,24 @@ export default function Rental() {
                         <Rating rating={rating} />
                     </div>
                 </div>
+            </div>
+
+            <div className='Description_container'>
+                <Collapsible title="Description" description={description} />
+                <Collapsible title="Equipements" 
+                description= {
+                    <ul className='Rental_equipments'>
+                        {
+                            equipments.map(equipment => {
+                                return(
+                                    <li key={equipment}>{equipment}</li>
+                                )
+                            })
+                        }
+                    </ul>
+                }
+                
+                />
             </div>
         </div>
     )

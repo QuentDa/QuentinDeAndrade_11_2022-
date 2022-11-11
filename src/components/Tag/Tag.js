@@ -2,9 +2,8 @@ import React from 'react';
 import './Tag.css';
 
 export default function Tag({tags}) {
-    console.log({tags})
     return (
-        <div>
+        <div className='Tag_wrapper'>
             {
                 tags.map(tag => {
                     return(
@@ -15,4 +14,3 @@ export default function Tag({tags}) {
         </div>
     );
 }
-{/* <span className='Tag'>{tag}</span> */}

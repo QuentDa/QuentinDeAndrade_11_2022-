@@ -1,5 +1,5 @@
-import React, { useState} from 'react';
-import Star from './../../assets/svg/star.svg'
+import React from 'react';
+import Star from '../Star/Star';
 import './Rating.css';
 
 export default function Rating({ rating }) {
@@ -8,15 +8,15 @@ export default function Rating({ rating }) {
 
     let li = [];
     for (let i = 0; i < rating; i++) {
-        li.push(<li key={i}>ETOILE PLEINE</li>)
+        li.push(<li key={i}><Star color="#FF6060" /></li>)
     }
     for (let j = 0; j < blankStars; j++) {
-        li.push(<li key={j}>ETOILE VIDE</li>)
+        li.push(<li key={j}><Star color="#E3E3E3" /></li>)
     }
     
     return (
-        <div>
-            <ul>
+        <div className='Rating-stars'>
+            <ul className='Rating-stars-list'>
                 {li}
             </ul>
         </div>
