@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Rentals from './../../assets/data/logements.json'
 import Carousel from '../../components/Carousel/Carousel';
 import Tag from './../../components/Tag/Tag';
@@ -12,6 +12,15 @@ export default function Rental() {
     const foundRental = Rentals.find(element => {
         return element.id === id;
     });
+    const navigate = useNavigate();
+    
+    if (!foundRental) {
+        useEffect(() => {
+            navigate('/404')
+        })
+        return;
+    }
+    
     const slides = foundRental.pictures;
     const rating = foundRental.rating;
     const tags = foundRental.tags;

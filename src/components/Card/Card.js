@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './Card.css';
 
 export default function Card({Link, Picture, Alt, Title}) {
-    console.log(Link)
     return (
         <NavLink to={Link}>
             <div className='Card'>
